@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cbcb-software-crawler"
+version = "0.1.0"
+description = "Crawler and static catalog generator for CBCB-affiliated software repositories."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "fastapi>=0.111",
+  "python-multipart>=0.0.9",
+  "PyYAML>=6.0",
+  "uvicorn[standard]>=0.29",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+cbcb-software-crawler = "cbcb_software_crawler.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cbcb_software_crawler = ["templates/*", "assets/*"]
+
+[tool.uv]
+package = true

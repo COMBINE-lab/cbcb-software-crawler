@@ -1,0 +1,143 @@
+.cbcb-software-embed {
+  --cbcb-green: #346a2e;
+  --umd-red: #e21833;
+  --umd-yellow: #ffd520;
+  --ink: #222;
+  --muted: #4a4a4a;
+  --line: #d8d8d8;
+  --wash: #f7f7f7;
+  color: var(--ink);
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.cbcb-software-embed * {
+  box-sizing: border-box;
+}
+
+.cbcb-software-embed a {
+  color: var(--umd-red);
+  font-weight: 700;
+}
+
+.cbcb-software-embed .eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--umd-red);
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+.cbcb-software-embed h2 {
+  margin: 0;
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 2.25rem;
+  line-height: 1.05;
+}
+
+.cbcb-software-embed .software-catalog {
+  padding: 2.5rem 0 4rem;
+}
+
+.cbcb-software-embed .catalog-summary,
+.cbcb-software-embed .catalog-controls {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cbcb-software-embed .catalog-summary > p {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.cbcb-software-embed .catalog-controls {
+  align-items: center;
+  padding: 1rem;
+  background: var(--wash);
+  border-left: 5px solid var(--umd-red);
+}
+
+.cbcb-software-embed .catalog-controls label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.cbcb-software-embed .catalog-controls input[type="search"] {
+  width: min(32rem, 100%);
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--line);
+  font: inherit;
+}
+
+.cbcb-software-embed .toggle-label {
+  display: flex !important;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.cbcb-software-embed .table-wrap {
+  overflow-x: auto;
+}
+
+.cbcb-software-embed .software-table {
+  width: 100%;
+  border-collapse: collapse;
+  empty-cells: show;
+}
+
+.cbcb-software-embed .software-table thead {
+  background: #767676;
+  color: #fff;
+}
+
+.cbcb-software-embed .software-table th,
+.cbcb-software-embed .software-table td {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.cbcb-software-embed .software-table th button {
+  width: 100%;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  font-weight: 900;
+  text-align: left;
+  cursor: pointer;
+}
+
+.cbcb-software-embed .software-table th button::after {
+  content: " ↕";
+  color: var(--umd-yellow);
+}
+
+.cbcb-software-embed .software-table tbody tr:nth-child(even) {
+  background: var(--wash);
+}
+
+.cbcb-software-embed .software-table tr[hidden] {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .cbcb-software-embed .catalog-summary,
+  .cbcb-software-embed .catalog-controls {
+    display: block;
+  }
+
+  .cbcb-software-embed .catalog-controls label + label {
+    margin-top: 1rem;
+  }
+}

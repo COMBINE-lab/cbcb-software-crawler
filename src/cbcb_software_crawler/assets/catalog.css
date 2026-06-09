@@ -1,0 +1,286 @@
+:root {
+  --cbcb-green: #346a2e;
+  --cbcb-green-light: #acd4ac;
+  --umd-red: #e21833;
+  --umd-yellow: #ffd520;
+  --ink: #222;
+  --muted: #4a4a4a;
+  --line: #d8d8d8;
+  --wash: #f7f7f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--umd-red);
+  font-weight: 700;
+}
+
+.site-header {
+  background: var(--ink);
+  color: #fff;
+}
+
+.site-brand {
+  padding: 0.4rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-bottom: 1px solid #444;
+}
+
+.site-header__bar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  min-height: 5.625rem;
+  padding: 0 4rem;
+}
+
+.site-header__logo-text {
+  max-width: 34rem;
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--umd-yellow);
+}
+
+.catalog-shell {
+  width: min(1180px, calc(100% - 3rem));
+  margin: 0 auto;
+}
+
+.catalog-hero {
+  padding: 4rem 0 3rem;
+  border-bottom: 7px solid var(--cbcb-green);
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--umd-red);
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Crimson Text", Georgia, serif;
+  line-height: 1.05;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 7vw, 5.5rem);
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+.catalog-hero p:last-child {
+  max-width: 48rem;
+  color: var(--muted);
+  font-size: 1.35rem;
+}
+
+.software-catalog {
+  padding: 2.5rem 0 4rem;
+}
+
+.catalog-summary,
+.catalog-controls {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.catalog-summary > p {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.catalog-controls {
+  align-items: center;
+  padding: 1rem;
+  background: var(--wash);
+  border-left: 5px solid var(--umd-red);
+}
+
+.catalog-controls label,
+.admin-form label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.catalog-controls input[type="search"],
+.admin-form input,
+.admin-form textarea {
+  width: min(32rem, 100%);
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--line);
+  font: inherit;
+}
+
+.admin-form textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.toggle-label {
+  display: flex !important;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.software-table {
+  width: 100%;
+  border-collapse: collapse;
+  empty-cells: show;
+}
+
+.software-table thead {
+  background: #767676;
+  color: #fff;
+}
+
+.software-table th,
+.software-table td {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.software-table th button {
+  width: 100%;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  font-weight: 900;
+  text-align: left;
+  cursor: pointer;
+}
+
+.software-table th button::after {
+  content: " ↕";
+  color: var(--umd-yellow);
+}
+
+.software-table tbody tr:nth-child(even) {
+  background: var(--wash);
+}
+
+.software-table tr[hidden] {
+  display: none;
+}
+
+.site-footer {
+  padding: 2rem 4rem;
+  color: #fff;
+  background: var(--ink);
+}
+
+.site-footer p {
+  max-width: 58rem;
+}
+
+.admin-shell {
+  padding-bottom: 4rem;
+}
+
+.admin-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 42rem;
+  margin: 2rem 0;
+  padding: 1.25rem;
+  background: var(--wash);
+  border-left: 5px solid var(--cbcb-green);
+}
+
+.admin-form button {
+  width: fit-content;
+  padding: 0.8rem 1.2rem;
+  color: #000;
+  background: var(--umd-yellow);
+  border: 0;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.notice,
+.error {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.notice {
+  background: #eef7ee;
+  border-left: 5px solid var(--cbcb-green);
+}
+
+.error {
+  background: #fff0f2;
+  border-left: 5px solid var(--umd-red);
+}
+
+.admin-links {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .site-header__bar,
+  .site-footer {
+    padding: 1rem 1.5rem;
+  }
+
+  .site-nav,
+  .catalog-summary,
+  .catalog-controls {
+    display: block;
+  }
+
+  .catalog-controls label + label {
+    margin-top: 1rem;
+  }
+}

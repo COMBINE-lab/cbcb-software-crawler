@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CBCB Software Crawl Report</title>
+  <link rel="stylesheet" href="assets/catalog.css">
+</head>
+<body>
+  <main class="catalog-shell">
+    <section class="catalog-hero">
+      <p class="eyebrow">Generated $generated_at</p>
+      <h1>Crawl Report</h1>
+      <p>Source: $source</p>
+      <p>Valid entries: $valid_count</p>
+    </section>
+    <div class="table-wrap">
+      <table class="software-table">
+        <thead><tr><th>Repository</th><th>Reason</th><th>Detail</th></tr></thead>
+        <tbody>$skipped_rows</tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<section class="software-catalog" data-active-years="$active_years">
+  <div class="catalog-summary">
+    <div>
+      <p class="eyebrow">Generated $generated_at</p>
+      <h2>CBCB-Affiliated Software</h2>
+    </div>
+    <p><span data-visible-count>0</span> displayed of $total valid entries.</p>
+  </div>
+  <div class="catalog-controls" role="search">
+    <label>
+      Search
+      <input type="search" data-search placeholder="Search software, labs, descriptions">
+    </label>
+    <label class="toggle-label">
+      <input type="checkbox" data-show-all>
+      Show all valid entries
+    </label>
+  </div>
+  <div class="table-wrap">
+    <table class="software-table">
+      <thead>
+        <tr>
+          <th><button type="button" data-sort="0">Software</button></th>
+          <th><button type="button" data-sort="1">Lab</button></th>
+          <th><button type="button" data-sort="2">Description</button></th>
+          <th><button type="button" data-sort="3">Repository</button></th>
+          <th><button type="button" data-sort="4">Latest Version</button></th>
+          <th><button type="button" data-sort="5">Last Edited</button></th>
+          <th><button type="button" data-sort="6">Webpage</button></th>
+        </tr>
+      </thead>
+      <tbody>
+        $rows
+      </tbody>
+    </table>
+  </div>
+</section>
